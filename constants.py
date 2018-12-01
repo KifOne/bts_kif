@@ -1,4 +1,6 @@
-token = '618192190:AAHE4JzBTutfVKj1oSLfO0gRG18desGVH0U'
+token = '793190878:AAEsvzS5H_trJvQCJNRznIznPs_8LJVdKB8'
+
+token22 = '618192190:AAHE4JzBTutfVKj1oSLfO0gRG18desGVH0U'
 
 hello_text = '''Привет! В данном боте мы предлагаем заключить тебе пари и угадать, куда пойдёт курс криптовалют «вниз» или «вверх».
 
