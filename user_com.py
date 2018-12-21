@@ -168,11 +168,17 @@ def parse(arg): # парсинг сайта
         url = 'https://coinmarketcap.com/'
         r = urllib.request.urlopen(url).read()
         soup = BeautifulSoup(r, "html.parser")
-        table = soup.find_all('td', class_='no-wrap text-right')
+        table = soup.find_all('tbody')
         write = []
-        for i in table:
-            write.append(i.text[2:-2:])
-        return  write[:14:2]
+        table1 = table[0].find_all('a', class_='price')
+        table = table1
+        write.append(str(table[0]))
+        write.append(str(table[2]))
+        write.append(str(table[1]))
+        write.append(str(table[3]))
+        write.append(str(table[5]))
+        write.append(str(table[7]))
+        return write
     else:
         conn = sqlite3.connect('base.db')
         cursor = conn.cursor()
@@ -183,7 +189,6 @@ def parse(arg): # парсинг сайта
         cursor.close()
         conn.close()
         parse(write)
-
 
 
 def invite_plus(user_id): # Рефералка
