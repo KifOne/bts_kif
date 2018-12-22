@@ -165,7 +165,7 @@ def parse(arg): # парсинг сайта
         table = soup.find('span', class_='h2 text-semi-bold details-panel-item--price__value').text
         return table
     elif arg == 'All':
-        url = 'https://coinmarketcap.com/'
+        url = 'https://coinmarketcap.com/all/views/all/'
         r = urllib.request.urlopen(url).read()
         soup = BeautifulSoup(r, "html.parser")
         table = soup.find_all('tbody')
@@ -176,8 +176,8 @@ def parse(arg): # парсинг сайта
         write.append(str(table[2].text))
         write.append(str(table[1].text))
         write.append(str(table[3].text))
-        write.append(str(table[5].text))
-        write.append(str(table[7].text))
+        write.append(str(table[4].text))
+        write.append(str(table[8].text))
         return write
     else:
         conn = sqlite3.connect('base.db')
