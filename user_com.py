@@ -172,12 +172,12 @@ def parse(arg): # парсинг сайта
         write = []
         table1 = table[0].find_all('a', class_='price')
         table = table1
-        write.append(str(table[0]))
-        write.append(str(table[2]))
-        write.append(str(table[1]))
-        write.append(str(table[3]))
-        write.append(str(table[5]))
-        write.append(str(table[7]))
+        write.append(str(table[0].text))
+        write.append(str(table[2].text))
+        write.append(str(table[1].text))
+        write.append(str(table[3].text))
+        write.append(str(table[5].text))
+        write.append(str(table[7].text))
         return write
     else:
         conn = sqlite3.connect('base.db')
