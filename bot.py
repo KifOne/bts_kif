@@ -39,7 +39,7 @@ def start (bot, update):
                                       link_name)
         bottons = [['Русский🇷🇺', 'English🇺🇸']]
         user_markup = ReplyKeyboardMarkup(bottons)
-        bot.send_message(update.message.chat.id, 'Здравствуйте, выберите язык:', reply_markup=user_markup)
+        bot.send_message(update.message.chat.id, 'Hey. Choose a language:', reply_markup=user_markup)
 
 def answer_start(bot, update):
     global flag, time_you, money, money_1, const, const_1, start_one, const_e, const_1_e, flag_e, time_you_e
