@@ -1,4 +1,4 @@
-token = '572637496:AAEitWigXlgKarpFgOp_d_wUWVv5RcpYpJo'
+token = '785233091:AAEXM9_6EWsoS7CYK3FQUj1LdEqpWJ3bpag'
 
 token22 = '618192190:AAHE4JzBTutfVKj1oSLfO0gRG18desGVH0U'
 
